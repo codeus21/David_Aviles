@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef } from 'react'
 import TypeWriter from './components/TypeWriter'
 import AnimatedHeading from './components/AnimatedHeading'
+import emailjs from '@emailjs/browser'
 import './App.css'
 
 function App() {
@@ -8,6 +9,12 @@ function App() {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
+    message: ''
+  })
+  const [formStatus, setFormStatus] = useState({
+    submitting: false,
+    success: false,
+    error: false,
     message: ''
   })
 
@@ -75,17 +82,49 @@ function App() {
     }))
   }
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault()
-    // Here you would typically handle the form submission
-    // For example, sending the data to an API
-    console.log('Form submitted:', formData)
-    // Clear the form
-    setFormData({
-      name: '',
-      email: '',
+    setFormStatus({
+      submitting: true,
+      success: false,
+      error: false,
       message: ''
     })
+
+    try {
+      await emailjs.send(
+        'service_7bxbsx4', // Replace with your EmailJS service ID
+        'template_3r1zmak', // Replace with your EmailJS template ID
+        {
+          from_name: formData.name,
+          from_email: formData.email,
+          message: formData.message,
+          to_name: 'David Aviles', // Your name
+        },
+        'UqnYxg8Q_no7i-ynh' // Replace with your EmailJS public key
+      )
+
+      setFormStatus({
+        submitting: false,
+        success: true,
+        error: false,
+        message: 'Message sent successfully!'
+      })
+
+      // Clear the form
+      setFormData({
+        name: '',
+        email: '',
+        message: ''
+      })
+    } catch (error) {
+      setFormStatus({
+        submitting: false,
+        success: false,
+        error: true,
+        message: 'Failed to send message. Please try again.'
+      })
+    }
   }
 
   return (
@@ -119,8 +158,7 @@ function App() {
           <h2>About Me</h2>
           <div className="about-content">
             <div className="about-text">
-              <p>Self-taught front-end developer with 6 months of hands-on experience building responsive and dynamic web applications using HTML, CSS, JavaScript, and React. Passionate about writing clean code, solving problems, and constantly improving.
-              </p>
+              <p>Front-end Web Developer with experience in building responsive and dynamic web applications. I can build you a website from scratch or help you redesign your current one and help your business grow.</p>
               <p>My approach combines technical expertise with creative problem-solving to deliver high-quality solutions that make a difference.</p>
             </div>
           </div>
@@ -209,7 +247,18 @@ function App() {
                   required
                 ></textarea>
               </div>
-              <button type="submit" className="submit-button">Send Message</button>
+              <button 
+                type="submit" 
+                className="submit-button"
+                disabled={formStatus.submitting}
+              >
+                {formStatus.submitting ? 'Sending...' : 'Send Message'}
+              </button>
+              {formStatus.message && (
+                <div className={`form-message ${formStatus.success ? 'success' : 'error'}`}>
+                  {formStatus.message}
+                </div>
+              )}
             </form>
           </div>
         </section>

@@ -1,5 +1,3 @@
-import React from 'react'
-
 const AnimatedHeading = ({ text }) => {
   return (
     <h1 className="animated-heading">
