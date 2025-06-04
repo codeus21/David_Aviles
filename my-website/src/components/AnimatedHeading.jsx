@@ -1,22 +1,15 @@
-import { useState } from 'react'
+import React from 'react'
 
 const AnimatedHeading = ({ text }) => {
-  const [hoveredIndex, setHoveredIndex] = useState(null)
-
   return (
     <h1 className="animated-heading">
-      {text.split('').map((char, index) => (
+      {text.split(' ').map((word, wordIndex) => (
         <span 
-          key={index} 
-          className={`letter ${char === ' ' ? 'space' : ''}`}
-          style={{
-            '--delay': `${index * 0.05}s`,
-            '--hover': hoveredIndex === index ? '1' : '0'
-          }}
-          onMouseEnter={() => setHoveredIndex(index)}
-          onMouseLeave={() => setHoveredIndex(null)}
+          key={wordIndex} 
+          className="word"
         >
-          {char}
+          {word}
+          {wordIndex < text.split(' ').length - 1 && ' '}
         </span>
       ))}
     </h1>

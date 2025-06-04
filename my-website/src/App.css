@@ -365,14 +365,12 @@ section {
   margin-bottom: 1rem;
 }
 
-.animated-heading .letter {
+.animated-heading .word {
   display: inline-block;
-  transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1);
-  transform: translateY(calc(var(--hover) * -10px));
   color: var(--primary-color);
-  cursor: default;
+  margin-right: 0.25em;
 }
 
-.animated-heading .letter.space {
-  margin: 0 0.2em;
+.animated-heading .word:last-child {
+  margin-right: 0;
 }
