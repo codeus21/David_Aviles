@@ -145,7 +145,7 @@ function App() {
       <main>
         <section id="home" className="hero" ref={sections.home}>
           <div className="hero-content">
-            <AnimatedHeading text="Hi, I'm David Aviles." />
+            <h1 className="animated-heading">Hi, I'm David Aviles.</h1>
             <h2>Frontend Developer</h2>
             <TypeWriter text="I create beautiful, responsive, and user-friendly web experiences." />
             <br/>

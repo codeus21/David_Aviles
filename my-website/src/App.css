@@ -388,14 +388,5 @@ section {
   display: inline-block;
   font-size: 3.5rem;
   margin-bottom: 1rem;
-}
-
-.animated-heading .word {
-  display: inline-block;
   color: var(--primary-color);
-  margin-right: 0.25em;
-}
-
-.animated-heading .word:last-child {
-  margin-right: 0;
 }
