@@ -65,18 +65,19 @@ The build files will be created in the `dist` folder.
 ## 📁 Project Structure
 
 ```
-my-website/
-├── src/
-│   ├── components/
-│   │   └── TypeWriter.jsx      # Typewriter animation component
-│   ├── PersonalWebsite.jsx     # Main portfolio component
-│   ├── PersonalWebsite.css     # All styling and animations
-│   └── main.jsx               # Entry point
-├── public/
-│   └── BarberBook-screenshot.png  # Project screenshot
-├── index.html                 # HTML template
-├── vite.config.js            # Vite configuration
-└── package.json              # Project dependencies
+David_Aviles/                  # Git repository root
+└── my-website/               # Project directory
+    ├── src/
+    │   ├── components/
+    │   │   └── TypeWriter.jsx      # Typewriter animation component
+    │   ├── PersonalWebsite.jsx     # Main portfolio component
+    │   ├── PersonalWebsite.css     # All styling and animations
+    │   └── main.jsx               # Entry point
+    ├── public/
+    │   └── BarberBook-screenshot.png  # Project screenshot
+    ├── index.html                 # HTML template
+    ├── vite.config.js            # Vite configuration
+    └── package.json              # Project dependencies
 ```
 
 ## 🎨 Key Features Explained
