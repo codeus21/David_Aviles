@@ -225,12 +225,9 @@ function PersonalWebsite() {
           <h2>About Me</h2>
           <div className="about-content">
             <div className="about-text">
-              <p>Hi, I'm David, a front-end web developer with a strong passion for crafting clean, responsive, and user-friendly web experiences. With 6 months of hands-on experience, I've been building real-world projects that focus on both functionality and design.<br/><br/>
-                My journey into web development began with a deep curiosity for how modern websites work—and quickly grew into a full-blown dedication to mastering HTML, CSS, JavaScript, and React. 
-                I specialize in turning ideas into interactive, accessible web interfaces. Whether it's building landing pages, optimizing site performance, or creating smooth user flows, I bring a detail-oriented and problem-solving mindset to every project. <br/><br/>
-                In addition to my technical skills, I've worked directly with clients on small freelance projects, which has sharpened my ability to communicate clearly, gather requirements, and deliver results. 
-                I'm continuously learning and growing, currently diving deeper into React and exploring how to integrate AI tools into my workflow.<br/><br/>
-                I'm excited about the future of the web and always looking for new opportunities to learn, build, and contribute..</p>
+              <p>Hi, I'm David, a passionate full-stack developer with 6 months of hands-on experience building modern web applications. I specialize in creating responsive, user-friendly interfaces and robust backend systems.<br/><br/>
+                My journey began with frontend development using HTML, CSS, and JavaScript, React. I've since expanded into full-stack development, working with C# .NET for backend APIs, PostgreSQL for database management, and modern deployment practices using Docker, Vercel, and Railway.<br/><br/>
+                I bring a detail-oriented, problem-solving approach to every project, from concept to deployment. I'm always eager to learn new technologies and take on challenging projects that push my skills forward.</p>
             </div>
             <div className="about-image">
               <span role="img" aria-label="developer">💻</span>
