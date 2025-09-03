@@ -226,7 +226,7 @@ function PersonalWebsite() {
           <div className="about-content">
             <div className="about-text">
               <p>Hi, I'm David, a passionate full-stack developer with 6 months of hands-on experience building modern web applications. I specialize in creating responsive, user-friendly interfaces and robust backend systems.<br/><br/>
-                My journey began with frontend development using HTML, CSS, and JavaScript, React. I've since expanded into full-stack development, working with C# .NET for backend APIs, PostgreSQL for database management, and modern deployment practices using Docker, Vercel, and Railway.<br/><br/>
+                My journey began with frontend development using HTML, CSS, JavaScript, and React. I've since expanded into full-stack development, working with C# .NET for backend APIs, PostgreSQL for database management, and modern deployment practices using Docker, Vercel, and Railway.<br/><br/>
                 I bring a detail-oriented, problem-solving approach to every project, from concept to deployment. I'm always eager to learn new technologies and take on challenging projects that push my skills forward.</p>
             </div>
             <div className="about-image">
